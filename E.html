@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EventHive</title>
+  <link rel="stylesheet" href="E.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+
+ <nav class="navbar">
+  <div class="logo">
+    <i class="fa-solid fa-cube"></i> Event<span>Hive</span>
+  </div>
+  
+  <div class="nav-links">
+    <a href="E.html" class="active">Events</a>
+  </div>
+
+  <button id="theme-toggle" class="theme-btn">
+    <i class="fa-solid fa-sun"></i>
+  </button>
+</nav>
+
+  <div class="page">
+    <header class="hero">
+      <h1>Discover Extraordinary Events</h1>
+      <p>Explore concerts, tech workshops, and webinars happening around you.</p>
+    </header>
+
+    <section class="controls">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search-input" placeholder="Search events...">
+      </div>
+      <div class="filter-group">
+        <select id="filter-category">
+          <option value="all">All Categories</option>
+          <option value="Workshop">Workshop</option>
+          <option value="Concert">Concert</option>
+          <option value="Webinar">Webinar</option>
+        </select>
+        <select id="filter-price">
+          <option value="all">All Prices</option>
+          <option value="free">Free</option>
+          <option value="paid">Paid</option>
+        </select>
+      </div>
+    </section>
+
+    <main class="events-grid" id="events-container"></main>
+  </div>
+
+  <div id="ticket-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <i class="fa-solid fa-circle-check success-icon"></i>
+      <h2>Booking Confirmed!</h2>
+      <p>Here is your digital ticket pass:</p>
+      <div class="digital-ticket">
+        <h3 id="ticket-event-title">Event Title</h3>
+        <p><strong>Pass ID:</strong> <span id="ticket-id">#EV-9021</span></p>
+        <p><strong>Status:</strong> Confirmed ✅</p>
+      </div>
+      <button class="btn-primary" onclick="closeModal()">Close & Download Pass</button>
+    </div>
+  </div>
+
+  <script src="E.js"></script>
+</body>
+</html>
